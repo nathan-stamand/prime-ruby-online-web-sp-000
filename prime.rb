@@ -6,7 +6,7 @@ def prime?(num)
 
   list = (1..num).to_a
   new_list = []
-  
+
   if list.length < 3
     true
   else
@@ -16,9 +16,10 @@ def prime?(num)
       end
     end
     if new_list.length > 2
-      return false
-    else
       return true
+    else
+      return false
     end
   end
 end
+
