@@ -1,4 +1,8 @@
 def prime?(num)
+  
+  if num < 0
+    num = num * -1
+  end
 
   list_of_divs = (2..num-1).to_a
 
