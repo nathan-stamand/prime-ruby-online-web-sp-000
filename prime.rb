@@ -16,9 +16,9 @@ def prime?(num)
       end
     end
     if new_list.length > 2
-      return true
-    else
       return false
+    else
+      return true
     end
   end
 end
