@@ -7,7 +7,9 @@ def prime?(num)
   list = (1..num).to_a
   new_list = []
 
-  if list.length < 3
+  if list.length == 0 || list.length == 1
+    false
+  elsif list.length < 3
     true
   else
     list.each do |div|
@@ -22,4 +24,3 @@ def prime?(num)
     end
   end
 end
-
