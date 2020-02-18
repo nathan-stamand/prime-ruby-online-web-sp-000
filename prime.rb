@@ -1,18 +1,24 @@
 def prime?(num)
-  
+
   if num < 0
-    num = num * -1
+    num*=-1
   end
 
-  list_of_divs = (2..num-1).to_a
-
-  i = 0
-  while i < list_of_divs.length
-    if num % list_of_divs[i] == 0
+  list = (1..num).to_a
+  new_list = []
+  
+  if list.length < 3
+    true
+  else
+    list.each do |div|
+      if num % div == 0
+        new_list << div
+      end
+    end
+    if new_list.length > 2
       return false
     else
-      i += 1
+      return true
     end
-    return true
   end
 end
